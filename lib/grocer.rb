@@ -22,9 +22,9 @@ def consolidate_cart(cart)
   count = 0
   final_cart = []
   cart.each do | items |
+    binding.pry
     final_cart << items
   end
-  binding.pry 
 end
 
 
