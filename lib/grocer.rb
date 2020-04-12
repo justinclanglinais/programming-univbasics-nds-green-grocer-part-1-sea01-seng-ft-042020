@@ -26,6 +26,7 @@ def consolidate_cart(cart)
     count += 1
   end
   index = 0
+  binding.pry
   sorted_cart = final_cart.sort
   sorted_cart.each do | items |
     if items == sorted_cart[index-1]
