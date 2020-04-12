@@ -26,7 +26,7 @@ def consolidate_cart(cart)
     count += 1
   end
   index = 0
-  ultimate_cart
+  ultimate_cart = []
   final_cart.each do | items |
     if items == final_cart[index-1]
       final_cart[index-1][:count] = final_cart[index-1][:count] += 1
