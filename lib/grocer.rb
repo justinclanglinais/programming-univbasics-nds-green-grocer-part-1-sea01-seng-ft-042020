@@ -21,9 +21,10 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   count = 0
   final_cart = []
+  binding.pry
   cart.each do | items |
     final_cart.each do | final_items |
-      binding.pry 
+      # binding.pry 
       if items == final_items
         items[:count] += 1
       end
