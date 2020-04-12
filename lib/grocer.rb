@@ -26,15 +26,17 @@ def consolidate_cart(cart)
     count += 1
   end
   index = 0
+  ultimate_cart
   final_cart.each do | items |
     if items == final_cart[index-1]
       final_cart[index-1][:count] = final_cart[index-1][:count] += 1
       index += 1
     else
-      final_cart << items
+      ultimate_cart << items
       index += 1
     end
   end 
+  ultimate_cart
   # binding.pry 
 end
 
