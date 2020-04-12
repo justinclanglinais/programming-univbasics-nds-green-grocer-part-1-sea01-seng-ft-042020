@@ -23,14 +23,9 @@ def consolidate_cart(cart)
   final_cart = []
   cart.each do | items |
     final_cart << items
+    final_cart[count][:count += 1]
     count += 1
   end
-  index = 0
-  ultimate_cart = []
-  final_cart.each do | items |
-    
-  end 
-  ultimate_cart
   # binding.pry 
 end
 
