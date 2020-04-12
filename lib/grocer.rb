@@ -5,7 +5,7 @@ def find_item_by_name_in_collection(name, collection)
   count = 0 
   collection.each do | item |
     if collection[item] == name 
-      return grocery_shelf[count]
+      return collection[count][:item]
     end
     count += 1
   end
