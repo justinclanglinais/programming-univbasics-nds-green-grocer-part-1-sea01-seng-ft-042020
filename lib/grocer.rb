@@ -19,9 +19,10 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  count = 0 
+  count = 0
+  final_cart = []
   cart.each do | items |
-    binding.pry
+    final_cart << items
     count += 1
   end
 end
