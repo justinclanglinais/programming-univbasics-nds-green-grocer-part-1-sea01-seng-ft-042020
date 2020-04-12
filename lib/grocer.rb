@@ -25,6 +25,7 @@ def consolidate_cart(cart)
     final_cart << items
     count += 1
   end
+  binding.pry 
 end
 
 
