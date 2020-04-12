@@ -19,13 +19,20 @@ def consolidate_cart(cart)
   #
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
-  count = 0
   final_cart = []
   cart.map do | items |
     final_cart << items
     count += 1
   end
-  
+  count = 0
+  sorted_cart = final_cart.sort
+  sorted_cart.each do | items |
+    if items == sorted_cart[count-1]
+      sorted_cart[count-1][:count] = sorted_cart[count-1][:count] += 1
+    else
+      sorted_cart << items
+    end
+  end 
   # binding.pry 
 end
 
