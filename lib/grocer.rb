@@ -25,6 +25,7 @@ def consolidate_cart(cart)
     final_cart.each do | final_items |
       if items == final_items
         items[:count] += 1
+      end
     end
     final_cart << items
     count += 1
