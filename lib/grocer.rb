@@ -22,7 +22,7 @@ def consolidate_cart(cart)
   count = 0
   final_cart = []
   cart.each do | items |
-    if items[:count] = nil
+    if items[:count] == nil
       items[:count] = 0
     end
     items[:count] += 1
