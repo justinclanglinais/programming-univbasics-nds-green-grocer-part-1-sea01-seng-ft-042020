@@ -23,9 +23,9 @@ def consolidate_cart(cart)
   final_cart = []
   cart.each do | items |
     final_cart.each do | final_items |
-      binding.pry
-      if items == final_items
-        items[:count] += 1
+      final_items[:count] = 0
+      if items[count] == final_items
+        items[count][:count] += 1
       end
     end
     final_cart << items
