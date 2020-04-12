@@ -6,7 +6,7 @@ def find_item_by_name_in_collection(name, collection)
   # Consult README for inputs and outputs
   count = 0 
   collection.each do | item |
-    if collection[index][:item] == name 
+    if collection[count][:item] == name 
       return collection[count]
     end
     count += 1
