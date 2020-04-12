@@ -21,20 +21,14 @@ def consolidate_cart(cart)
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   count = 0
   final_cart = []
-  cart.map do | items |
+  cart.each do | items |
     final_cart << items
     count += 1
   end
   index = 0
   ultimate_cart = []
   final_cart.each do | items |
-    if items == final_cart[index-1]
-      final_cart[index-1][:count] = final_cart[index-1][:count] += 1
-      index += 1
-    else
-      ultimate_cart << items
-      index += 1
-    end
+    
   end 
   ultimate_cart
   # binding.pry 
