@@ -20,13 +20,15 @@ def consolidate_cart(cart)
   # REMEMBER: This returns a new Array that represents the cart. Don't merely
   # change `cart` (i.e. mutate) it. It's easier to return a new thing.
   count = 0
+  inner_count = 0
   final_cart = []
   cart.each do | items |
     final_cart.each do | final_items |
       final_items[:count] = 0
-      if items[count] == final_items
+      if items[inner_count] == final_items
         items[count][:count] += 1
       end
+      inner_count += 1
     end
     final_cart << items
     count += 1
